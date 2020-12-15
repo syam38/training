@@ -1,0 +1,13 @@
+<!-- Reactive Forms -->
+<form [formGroup]="profileForm" (ngSubmit)="submit()">
+    <label> 
+        First Name
+        <input type="text" formControlName="firstName" required data-cy="firstName">
+    </label>
+    <label>
+        Last Name
+        <input type="text" formControlName="lastName" required data-cy="lastName">
+    </label>
+  <button type="submit" [disabled]="!profileForm.valid" data-cy="submit">Submit</button>
+</form>
+
